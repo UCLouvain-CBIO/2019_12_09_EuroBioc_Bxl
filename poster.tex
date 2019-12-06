@@ -118,13 +118,13 @@
 \begin{center}
   \colorbox{lgray}{
     \begin{minipage}{3cm}
-      \includegraphics[width=10em,height=10em]{pix/sticker2019.png}
+      \includegraphics[width=10em]{pix/sticker2019.png}
     \end{minipage}
 
   \begin{minipage}{.74\textwidth}
     \begin{center}
       % Title
-      \huge \textbf{msdata2: proteomics benchmarking datasets } \\
+      \huge \textbf{The \texttt{msdata2} data package for proteomics benchmarking} \\
       \vspace{0.4cm}
       % Authors
       \Large \textbf{Chong Tang, Laurent Gatto} \\
@@ -157,11 +157,10 @@
       \vspace{.15cm}
       \section*{\huge Summary}
 
-      \large The \hcode{msdata2} package contains a set of public
+      \large The \hcode{msdata2} package contains a set of published
       quantification/identification proteomics datasets. The purpose
       of the package is to provide standard and curated datasets to
-      facilitate the benchmarking of identification/quantitative
-      proteomics workflows.
+      facilitate the benchmarking of proteomics workflows.
 
   \end{minipage}
 }
@@ -173,12 +172,13 @@
   \section*{The SGS Datasets}
   \large
 
-  The first dataset in \hcode{msdata2} is OpenSWATH output from SGS
-  dataset. The SWATH-MS Gold Standard (SGS) dataset consists of 90
-  SWATH-MS runs of 422 synthetic stable isotope-labeled standard (SIS)
-  peptides in ten different dilution steps, spiked into three protein
-  backgrounds of varying complexity (water, yeast and human), acquired
-  in three technical replicates \cite{Rost2014vh}.
+  The first dataset in \hcode{msdata2} is a SWATH experiment processed
+  with OpenSWATH output from SGS dataset. The SWATH-MS Gold Standard
+  (SGS) dataset consists of 90 SWATH-MS runs of 422 synthetic stable
+  isotope-labeled standard (SIS) peptides in ten different dilution
+  steps (1, 2, 4, 8, ..., 512 times), spiked into three protein backgrounds
+  of varying complexity (water, yeast and human), acquired in three
+  technical replicates \cite{Rost2014vh}.
 
   \vspace{1cm}
 
@@ -197,7 +197,7 @@
 
   \vspace{1cm}
 
-  \begin{tabular}{@{\extracolsep{5pt}} cl}
+  \begin{tabular}{@{\extracolsep{5pt}} ll}
     \\[-1.8ex]\hline
     \hline \\[-1.8ex]
     \textbf{Slot} & \textbf{Information} \\
@@ -218,7 +218,6 @@
 \noindent
 \begin{minipage}[t]{\linewidth}
   \vspace{0.5cm}
-  \section*{Protein level overview}
   \large
   \begin{center}
     \includegraphics[width=0.6\textwidth]{pix/human3.png}
@@ -236,11 +235,11 @@
     \vspace{.15cm}
     \section*{\huge Conclusion and Future Work}
     \large Our package \hcode{msdata2} will provide formatted labelled
-    and label-free quantification and raw data for proteomics.  In
-    future, we will also include large raw MS data with
-    \hcode{msdata2}, with the help of ExperimentHub. This package will
-    be a fundamental module for a benchmarking work on different
-    computational workflows.
+    and label-free quantification and raw data for proteomics.  In the
+    future, we will also include large raw MS data, making use of the
+    ExperimentHub cloud infrastructure. Our goal is for
+    \hcode{msdata2} to become a benchmarking tools on different
+    computational proteomics workflows.
 
   \end{minipage}
 }
@@ -253,11 +252,11 @@
   \section*{Data exploration}
   \large
 
-  Data visualization on the \hcode{MSnSet} with Human background: We can
-  notice the similarities between each replicates on these plots. PCA
-  on quantification values indicates $Run08$ - dilution 4X or dilution
-  steps higher concentration would provide higher accuracy on
-  identification/quantification.
+  Data visualization on the \hcode{MSnSet} with Human background. We
+  can notice the good consistency between replicates. The principal
+  component analysis confirms good separation for runs 10 to 7 (up to
+  dilution 8x). Further dilutions become much more difficult to tell
+  apart.
 
 \end{minipage}
 
